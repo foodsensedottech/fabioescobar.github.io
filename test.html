@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Profile</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f3f2ef;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #0a66c2;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .linkedin-profile {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #0a66c2;
+            object-fit: cover;
+        }
+
+        h3 {
+            color: #000;
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .location {
+            color: #666;
+            margin: 5px 0 20px;
+        }
+
+        button {
+            background-color: #0a66c2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004182;
+        }
+
+        .login-prompt {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .error-message {
+            color: #d11124;
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .refresh-button {
+            margin-top: 20px;
+            background-color: #057642;
+        }
+
+        .refresh-button:hover {
+            background-color: #046235;
+        }
+
+        .location-icon {
+            font-style: normal;
+            margin-right: 5px;
+        }
+
+        .profile-details {
+            margin: 15px 0;
+        }
+
+        .title {
+            color: #0a66c2;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LinkedIn Profile</h2>
+        <button id="login-button" onclick="loginWithLinkedIn()">Login with LinkedIn</button>
+        <div id="linkedin-feed">Please log in to see your profile</div>
+        <script src="js/linkedin-feed.js"></script>
+    </div>
+</body>
+</html> 
