@@ -13,6 +13,7 @@
     --transition: all 0.3s ease;
 }
 
+/* Global Styles */
 body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
     line-height: 1.4;
@@ -22,12 +23,26 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
+h2 { font-size: 2rem; letter-spacing: -0.3px; }
+h3 { font-size: 1.5rem; color: var(--primary-color); }
+
 /* Navigation */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: var(--header-height);
     background-color: var(--background-white) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 60px;
     border-bottom: 1px solid var(--border-color);
+    z-index: 1030;
 }
 
 .navbar-brand {
@@ -690,6 +705,7 @@ ul {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
+    margin-bottom: 0.75rem;
     transition: var(--transition);
 }
 
@@ -700,6 +716,11 @@ ul {
 }
 
 .timeline-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
     transition: var(--transition);
 }
 
@@ -876,7 +897,7 @@ body {
     color: white;
     text-decoration: none;
     transition: var(--transition);
-}
+    }
 
 .contact-info a:hover {
     color: var(--background-light);
@@ -959,7 +980,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 1.5rem;
 }
-
+    
 .achievement-card i {
     display: block;
     margin: 0 auto 1rem;
@@ -981,15 +1002,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;   /* Keep list items left-aligned for readability */
     display: inline-block;  /* This helps with centering while maintaining left alignment of text */
     margin: 0 auto;
-}
-
+    }
+    
 /* Optional: Add some spacing between achievement cards */
 .achievement-card {
     margin-bottom: 1rem;
     height: 100%;       /* Make all cards same height */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
 }
 
 /* LinkedIn Posts Section */
@@ -1015,7 +1036,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* LinkedIn Feed Styles */
 .linkedin-container {
-    background: white;
+        background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 20px;
@@ -1056,7 +1077,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .linkedin-post {
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
+        border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
 }
@@ -1149,4 +1170,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure navbar doesn't create extra space */
 .navbar {
     height: 60px; /* Fixed height for navbar */
+}
+
+.timeline-image-link {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+.timeline-image-link:hover .timeline-image {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
